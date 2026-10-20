@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>آرسام و آراز | فروشگاه آنلاین</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+  line-height: 1.9;
+}
+
+header {
+  background: linear-gradient(135deg, #171717, #29251a);
+  padding: 30px 15px;
+  text-align: center;
+  border-bottom: 2px solid #d6ad60;
+}
+
+.logo {
+  color: #e6c477;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header p {
+  color: #ddd;
+  font-size: 14px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 12px;
+  background: #171717;
+}
+
+nav a {
+  color: #e6c477;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 18px;
+  background: radial-gradient(circle, #332b1b, #0b0b0b 75%);
+}
+
+.hero h1 {
+  color: #f0d18b;
+  font-size: 25px;
+}
+
+.hero p {
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #d6ad60;
+  color: #111;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+section {
+  padding: 25px 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #e6c477;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.card {
+  background: #191919;
+  border: 1px solid #423822;
+  border-radius: 12px;
+  padding: 15px 8px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 38px;
+}
+
+.card h3 {
+  color: #f0d18b;
+  font-size: 17px;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.card button {
+  background: #d6ad60;
+  color: #111;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.info {
+  background: #171717;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.info p {
+  margin: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 22px 10px;
+  background: #171717;
+  border-top: 1px solid #423822;
+  color: #bbb;
+  font-size: 13px;
+}
+
+footer strong {
+  color: #e6c477;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">آرسام و آراز</div>
+  <p>کیفیت عالی، قیمت مناسب، خرید آسان</p>
+</header>
+
+<nav>
+  <a href="#home">صفحه اصلی</a>
+  <a href="#products">محصولات</a>
+  <a href="#about">درباره ما</a>
+  <a href="#contact">تماس با ما</a>
+</nav>
+
+<div class="hero" id="home">
+  <h1>به فروشگاه آرسام و آراز خوش آمدید</h1>
+  <p>فروش انواع برنج، روغن، قند، شکر و کالاهای اساسی</p>
+  <p>فروش عمده و خرده با امکان ثبت سفارش</p>
+  <a href="#products" class="button">مشاهده محصولات</a>
+</div>
+
+<section id="products">
+  <h2>محصولات فروشگاه</h2>
+
+  <div class="products">
+
+    <div class="card">
+      <div class="icon">🍚</div>
+      <h3>انواع برنج</h3>
+      <p>انواع برنج ایرانی و خارجی</p>
+      <button onclick="order('برنج')">سفارش محصول</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛢️</div>
+      <h3>روغن خوراکی</h3>
+      <p>انواع روغن برای مصارف روزانه</p>
+      <button onclick="order('روغن خوراکی')">سفارش محصول</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🍬</div>
+      <h3>قند و شکر</h3>
+      <p>مناسب مصرف خانگی و عمده</p>
+      <button onclick="order('قند و شکر')">سفارش محصول</button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h3>سایر کالاها</h3>
+      <p>برای اطلاع از موجودی تماس بگیرید</p>
+      <button onclick="order('سایر کالاها')">سفارش محصول</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2>چرا آرسام و آراز؟</h2>
+  <div class="info">
+    <p>⭐ توجه به کیفیت محصولات</p>
+    <p>💰 امکان خرید عمده و خرده</p>
+    <p>🤝 احترام به مشتریان</p>
+    <p>📦 ثبت سفارش آسان</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>ثبت سفارش و تماس</h2>
+  <div class="info">
+    <p>برای سفارش محصولات از طریق واتساپ اقدام کنید.</p>
+    <p>شماره تماس فروشگاه را هنگام تنظیم سایت وارد کنید.</p>
+    <a href="#" class="button" onclick="contactUs(); return false;">
+      ارتباط با فروشگاه
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>تمام حقوق برای <strong>آرسام و آراز</strong> محفوظ است.</p>
+  <p>فروشگاه آنلاین کالاهای اساسی | فروش عمده و خرده</p>
+</footer>
+
+<script>
+const PHONE = "";
+
+function order(product) {
+  const message =
+    "سلام، از سایت آرسام و آراز برای خرید " +
+    product + " پیام می‌دهم. لطفاً قیمت و موجودی را اعلام کنید.";
+
+  if (!PHONE) {
+    alert("برای فعال شدن سفارش، شماره واتساپ فروشگاه باید در کد وارد شود.");
+    return;
+  }
+
+  window.open(
+    "https://wa.me/" + PHONE +
+    "?text=" + encodeURIComponent(message),
+    "_blank"
+  );
+}
+
+function contactUs() {
+  if (!PHONE) {
+    alert("ابتدا شماره واتساپ فروشگاه را در کد وارد کنید.");
+    return;
+  }
+
+  window.open("https://wa.me/" + PHONE, "_blank");
+}
+</script>
+
+</body>
+</html>
